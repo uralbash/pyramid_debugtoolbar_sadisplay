@@ -34,10 +34,12 @@ class SadisplayDebugPanel(DebugPanel):
     """
     name = 'SADisplay'
     has_content = True
+    template = 'pyramid_debugtoolbar_sadisplay:templates/base.dbtmako'
 
     def __init__(self, request):
-        self.Base = get_sa_base(request)
         self.request = request
+        self.data = {}
+        self.Base = get_sa_base(request)
 
     def nav_title(self):
         return _('SADisplay')
@@ -48,13 +50,16 @@ class SadisplayDebugPanel(DebugPanel):
     def title(self):
         return _('SADisplay')
 
-    def content(self):
+    def render_vars(self, request):
         tables = self.Base.metadata.tables.values()
         desc = sadisplay.describe(tables)
         dot_data = sadisplay.dot(desc)
         graph = pydot.graph_from_dot_data(str(dot_data))
         svg_img = graph.create_svg()
-        vars = {'svg_img': svg_img}
+        return {'svg_img': svg_img}
+
+    def content(self):
+        vars = self.render_vars(self.request)
         return self.render(
             'pyramid_debugtoolbar_sadisplay:templates/base.dbtmako',
             vars, self.request)

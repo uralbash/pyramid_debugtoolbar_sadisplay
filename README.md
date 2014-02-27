@@ -11,7 +11,10 @@ Look how easy it is to use with Pyramid:
     config.registry.settings['debugtoolbar.panels'].append(SadisplayDebugPanel)
 
 and see...
+1.*v
 ![ScreenShot](https://raw.github.com/uralbash/pyramid_debugtoolbar_sadisplay/master/docs/example.png)
+2.*v
+![ScreenShot](https://raw.github.com/uralbash/pyramid_debugtoolbar_sadisplay/master/docs/example2.png)
 
 Installation
 ------------
