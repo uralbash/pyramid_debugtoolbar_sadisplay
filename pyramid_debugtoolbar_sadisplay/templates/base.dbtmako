@@ -1,4 +1,4 @@
 <h4>SQLAlchemy models preview</h4>
 ${ svg_img|n }
 <br />
-link: <a href="httpis://github.com/uralbash/pyramid_debugtoolbar_sadisplay" style="color:blue">pyramid_debugtoolbar_sadisplay</a>
+link: <a href="https://github.com/uralbash/pyramid_debugtoolbar_sadisplay" style="color:blue">pyramid_debugtoolbar_sadisplay</a>
