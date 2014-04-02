@@ -1,7 +1,6 @@
 import os
 import glob
 import fnmatch
-from debug_toolbar_sadisplay import version
 from setuptools import setup
 
 
@@ -46,7 +45,7 @@ print 'files', files
 
 setup(
     name='pyramid_debugtoolbar_sadisplay',
-    version=version.__version__,
+    version='0.0.1',
     url='http://github.com/uralbash/pyramid_debugtoolbar_sadisplay/',
     author='Svintsov Dmitry',
     author_email='root@uralbash.ru',
