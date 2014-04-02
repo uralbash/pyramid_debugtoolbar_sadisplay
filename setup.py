@@ -61,7 +61,7 @@ setup(
         'pyramid_debugtoolbar_sadisplay': ['templates/*.dbtmako', ],
     },
     description='Pyramid debug toolbar sadisplay. Models sa svg.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "sqlalchemy",
         "transaction",
